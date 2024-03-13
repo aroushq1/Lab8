@@ -9,37 +9,41 @@
   color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App > :first-child {
+  width: 100%; /* Makes the first child occupy the full width */
+  align-self: stretch; /* Optional, if you need the child to stretch to the container's width */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+  background-color: #333740; /* Slightly lighter than the app background for contrast */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-link {
+  color: #ffffff;
+  transition: color 0.2s; /* Smooth transition for color change */
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link:hover, .nav-link:focus {
+  color: #cccccc; /* Lighter color on hover */
+  text-decoration: none; /* Optional: removes underline on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-full-width {
+  width: 100%;
+  justify-content: space-between; /* Spread items evenly */
 }
+
+/* Tooltip styling */
+.tooltip-inner {
+  background-color: #f0f0f0;
+  color: #282c34;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+/* for hovering list's items */
+.hover-highlight:hover {
+  background-color: #f8f9fa !important; /* Light grey background on hover */
+}
+
